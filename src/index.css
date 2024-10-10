@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+p,
+li,
+a,
+label {
+    font-size: 1.8rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Grid Layouts */
+
+.grid {
+    display: grid;
+}
+
+.grid-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* Container */
+
+.container {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+/* Main Section */
+
+.main {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+/* Navigation */
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+
+.nav ul li a {
+    color: rgb(2, 25, 25);
+}
+
+
+/* Shape Divider */
+
+.divider {
+    &.custom-shape-divider-top-1726661115 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    .custom-shape-divider-top-1726661115 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 150px;
+    }
+    .custom-shape-divider-top-1726661115 .shape-fill {
+        fill: #FFFFFF;
+    }
+}
+
+
+/* Footer Styles */
+
+footer {
+    & .container {
+        height: auto;
+        background-color: black;
+    }
+}
+
+.link-text {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+footer .grid-three-cols {
+    display: flex;
+    justify-content: space-around;
+    gap: 6rem;
+    padding: 0 0 2rem 0;
+}
+
+
+/* Icon Styles */
+
+.icon {
+    display: grid;
+    gap: 1rem;
+    & a {
+        color: #FFFFFF;
+        font-size: 2rem;
+        transition: all 0.3s linear;
+        &:hover {
+            color: blue;
+            cursor: pointer;
+        }
+    }
+}
+
+nav ul li .active {
+    color: red;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+
+/* Main Image */
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Button Styles */
+
+:root {
+    --button-bg: #ff6a00;
+    --button-border: #ff9e00;
+    --button-color: white;
+    --button-glow: rgba(255, 106, 0, 0.5);
+}
+
+.button {
+    background: var(--button-bg);
+    color: var(--button-color);
+    border: 2px solid var(--button-border);
+    border-radius: 50px;
+    padding: 5px 3px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: var(--button-glow);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+.button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.button:hover {
+    color: var(--button-bg);
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Responsive Media Queries */
+
+@media (max-width: 1024px) {
+    .main-image {
+        width: 100%;
+    }
+    .buttons {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        width: 100%;
+    }
+    .sizeselector {
+        width: auto;
+    }
+    .sizenumber {
+        font-size: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        width: 50px;
+    }
+    .sizechart {
+        width: 100px;
+    }
+    .navbar ul li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .main-image {
+        width: 90%;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        align-items: center;
+    }
+    .sizeselector {
+        gap: 0.25rem;
+        width: 400px;
+    }
+    .sizenumber {
+        font-size: 10px;
+        grid-template-columns: repeat(9, 1fr);
+        width: 50px;
+        padding: 5px;
+    }
+    .sizechart {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-image {
+        width: 100%;
+    }
+    .sizeselector {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .buttons button {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+    .button {
+        font-size: 1rem;
+        padding: 5px 2px;
+        width: 100px;
+    }
+    .items-start {
+        justify-content: center;
+        align-items: center;
+    }
+    .sizechart {
+        width: 250px;
+    }
+    .sizeselector .sizenumber {
+        font-size: 8px;
+        grid-template-columns: repeat(6, 1fr);
+        width: 50px;
+        padding: 3px;
+    }
+}

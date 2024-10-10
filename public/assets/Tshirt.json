@@ -1,0 +1,188 @@
+ [{
+         "name": "RoundNeck T-Shirt",
+         "item": "roundneck/black3.jpg",
+         "variants": [{
+                 "color": "black",
+                 "mainImage": "roundneck/black.jpg",
+                 "sidebarImages": [
+                     "roundneck/black.jpg",
+                     "roundneck/black1.jpg",
+                     "roundneck/black2.jpg",
+                     "roundneck/black3.jpg"
+                 ]
+             },
+             {
+                 "color": "white",
+                 "mainImage": "roundneck/white.jpg",
+                 "sidebarImages": [
+                     "roundneck/white.jpg",
+                     "roundneck/white1.jpg",
+                     "roundneck/white2.jpg",
+                     "roundneck/white3.jpg"
+                 ]
+             },
+             {
+                 "color": "lightblue",
+                 "mainImage": "roundneck/lightblue.jpg",
+                 "sidebarImages": [
+                     "roundneck/lightblue.jpg",
+                     "roundneck/lightblue1.jpg",
+                     "roundneck/lightblue2.jpg",
+                     "roundneck/lightblue3.jpg"
+                 ]
+             },
+             {
+                 "color": "yellow",
+                 "mainImage": "roundneck/lightblue.jpg",
+                 "sidebarImages": [
+                     "roundneck/lightblue.jpg",
+                     "roundneck/lightblue1.jpg",
+                     "roundneck/lightblue2.jpg",
+                     "roundneck/lightblue3.jpg"
+                 ]
+             }
+
+         ]
+     },
+     {
+         "name": "Collar T-Shirt",
+         "item": "collartshirt/cb1.png",
+
+         "variants": [{
+                 "color": "black",
+                 "mainImage": "collartshirt/cb1.png",
+                 "sidebarImages": [
+                     "collartshirt/cb1.png",
+                     "collartshirt/cb2.png",
+                     "collartshirt/cb3.png",
+                     "collartshirt/cb4.png"
+                 ]
+             },
+             {
+                 "color": "white",
+                 "mainImage": "collartshirt/cw1.png",
+                 "sidebarImages": [
+                     "collartshirt/cw1.png",
+                     "collartshirt/cw2.png",
+                     "collartshirt/cw3.png",
+                     "collartshirt/cw4.png"
+                 ]
+             },
+             {
+                 "color": "brown",
+                 "mainImage": "roundneck/shirt_white.jpg",
+                 "sidebarImages": [
+                     "roundneck/shirt_white.jpg",
+                     "roundneck/shirt_white1.jpg",
+                     "roundneck/shirt_white2.jpg",
+                     "roundneck/shirt_white3.jpg"
+                 ]
+             }
+         ]
+     },
+     {
+         "name": "Pant",
+         "item": "collartshirt/cw1.png",
+         "variants": [{
+                 "color": "black",
+                 "mainImage": "roundneck/cw1.png",
+                 "sidebarImages": [
+                     "roundneck/pant_black.jpg",
+                     "roundneck/pant_black1.jpg",
+                     "roundneck/pant_black2.jpg",
+                     "roundneck/pant_black3.jpg"
+                 ]
+             },
+             {
+                 "color": "gray",
+                 "mainImage": "roundneck/pant_gray.jpg",
+                 "sidebarImages": [
+                     "roundneck/pant_gray.jpg",
+                     "roundneck/pant_gray1.jpg",
+                     "roundneck/pant_gray2.jpg",
+                     "roundneck/pant_gray3.jpg"
+                 ]
+             },
+             {
+                 "color": "navy",
+                 "mainImage": "roundneck/pant_navy.jpg",
+                 "sidebarImages": [
+                     "roundneck/pant_navy.jpg",
+                     "roundneck/pant_navy1.jpg",
+                     "roundneck/pant_navy2.jpg",
+                     "roundneck/pant_navy3.jpg"
+                 ]
+             }
+         ]
+     },
+     {
+         "name": "Pant",
+         "item": "collartshirt/cw1.png",
+         "variants": [{
+                 "color": "black",
+                 "mainImage": "roundneck/cw1.png",
+                 "sidebarImages": [
+                     "roundneck/pant_black.jpg",
+                     "roundneck/pant_black1.jpg",
+                     "roundneck/pant_black2.jpg",
+                     "roundneck/pant_black3.jpg"
+                 ]
+             },
+             {
+                 "color": "gray",
+                 "mainImage": "roundneck/pant_gray.jpg",
+                 "sidebarImages": [
+                     "roundneck/pant_gray.jpg",
+                     "roundneck/pant_gray1.jpg",
+                     "roundneck/pant_gray2.jpg",
+                     "roundneck/pant_gray3.jpg"
+                 ]
+             },
+             {
+                 "color": "navy",
+                 "mainImage": "roundneck/pant_navy.jpg",
+                 "sidebarImages": [
+                     "roundneck/pant_navy.jpg",
+                     "roundneck/pant_navy1.jpg",
+                     "roundneck/pant_navy2.jpg",
+                     "roundneck/pant_navy3.jpg"
+                 ]
+             }
+         ]
+     },
+     {
+         "name": "Pant",
+         "item": "collartshirt/cw1.png",
+         "variants": [{
+                 "color": "black",
+                 "mainImage": "roundneck/cw1.png",
+                 "sidebarImages": [
+                     "roundneck/pant_black.jpg",
+                     "roundneck/pant_black1.jpg",
+                     "roundneck/pant_black2.jpg",
+                     "roundneck/pant_black3.jpg"
+                 ]
+             },
+             {
+                 "color": "gray",
+                 "mainImage": "roundneck/pant_gray.jpg",
+                 "sidebarImages": [
+                     "roundneck/pant_gray.jpg",
+                     "roundneck/pant_gray1.jpg",
+                     "roundneck/pant_gray2.jpg",
+                     "roundneck/pant_gray3.jpg"
+                 ]
+             },
+             {
+                 "color": "navy",
+                 "mainImage": "roundneck/pant_navy.jpg",
+                 "sidebarImages": [
+                     "roundneck/pant_navy.jpg",
+                     "roundneck/pant_navy1.jpg",
+                     "roundneck/pant_navy2.jpg",
+                     "roundneck/pant_navy3.jpg"
+                 ]
+             }
+         ]
+     }
+ ]
