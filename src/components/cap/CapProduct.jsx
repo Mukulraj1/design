@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const CapProduct = () => {
-  const [capImages, setCapImages] = useState([]);
+  const [variants, setVariants] = useState([]);
   const [capParts, setCapParts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ const CapProduct = () => {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        setCapImages(data.capImages);  // Adjusted to match new JSON structure
+        setVariants(data.variants);  // Adjusted to match new JSON structure
         setCapParts(data.capParts);
       } catch (error) {
         setError('Failed to fetch cap data.');
@@ -30,7 +30,7 @@ const CapProduct = () => {
   }, []);
 
   const handleImageClick = (index) => {
-    navigate('/capcustomizer', { state: { capPart: capParts[index], mainImage: capImages[index].mainImage } });
+    navigate('/capcustomizer', { state: { capPart: capParts[index], mainImage: variants[index].mainImage } });
   };
 
   if (loading) {
@@ -47,14 +47,14 @@ const CapProduct = () => {
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {/* Display main images */}
-          {capImages.map((capImage, index) => (
+          {variants.map((variants, index) => (
             <div key={index} className="flex flex-col items-center">
               <div
                 className="relative bg-gray-200 rounded-lg overflow-hidden shadow-md cursor-pointer transition-transform transform hover:scale-105"
                 onClick={() => handleImageClick(index)}
               >
                 <img
-                  src={capImage.mainImage}
+                  src={variants.mainImage}
                   alt={`Cap Main Image ${index + 1}`}
                   className="w-full h-full object-cover"
                 />

@@ -16,15 +16,18 @@ const CapCustomizer = () => {
     topButton: ''
   });
   const [activePart, setActivePart] = useState('');
+  const [sidebarImages, setSidebarImages] = useState([]);
 
   useEffect(() => {
     fetch('/assets/CapData.json')
       .then((response) => response.json())
       .then((data) => {
         setCapData(data);
+        const variant = data.variants.find(variant => variant.mainImage === mainImage);
+        setSidebarImages(variant ? variant.sidebarImages : []);
       })
       .catch((error) => console.error('Error fetching JSON:', error));
-  }, []);
+  }, [mainImage]);
 
   const handleColorChange = (partName, image) => {
     setSelectedColors(prevColors => ({
@@ -38,15 +41,23 @@ const CapCustomizer = () => {
     setActivePart(partName);
   };
 
+  const handleSidebarImageClick = (image) => {
+    setSelectedColors(prevColors => ({
+      ...prevColors,
+      base: image
+    }));
+  };
+
   const handleCustomizeClick = () => {
     const product = {
       mainImage: selectedColors.base,
+      sidebarImages: mainImage.sidebarImages, // Include sidebar images associated with the main image
       variants: [
         { partName: 'crown', image: selectedColors.crown },
         { partName: 'peak', image: selectedColors.peak },
         { partName: 'sandwich', image: selectedColors.sandwich },
         { partName: 'topButton', image: selectedColors.topButton }
-      ].filter(part => part.image) // Filter out any parts without selected images
+      ].filter(part => part.image)
     };
 
     // Navigate to the design page with the product state
@@ -58,8 +69,19 @@ const CapCustomizer = () => {
   }
 
   return (
-    <div className="cap-customizer">
-      <div className="cap-preview" style={{ position: 'relative', width: '300px', height: '400px' }}>
+    <div className="container cap-customizer">
+      <div className="sidebar-images" style={{ marginTop: '20px' }}>
+        {sidebarImages.map((image, index) => (
+          <img 
+            key={index} 
+            src={image} 
+            alt={`Sidebar ${index}`} 
+            style={{ width: '100px', height: '100px', margin: '5px', cursor: 'pointer' }} 
+            onClick={() => handleSidebarImageClick(image)} // Handle click to change main image
+          />
+        ))}
+      </div>
+      <div className="  cap-preview" style={{ position: 'relative', width: '300px', height: '400px' }}>
         <img 
           src={selectedColors.base} 
           alt="Base" 
@@ -68,7 +90,7 @@ const CapCustomizer = () => {
         />
         
         {selectedColors.crown && (
-          <img src={selectedColors.crown} alt="Crown" className="cap-part crown" style={{ position: 'absolute', top: 0, left: 0, zIndex: 2 }} />
+          <img src={selectedColors.crown} alt="Crown" className=" cap-part crown" style={{ position: 'absolute', top: 0, left: 0, zIndex: 2 }} />
         )}
         {selectedColors.peak && (
           <img src={selectedColors.peak} alt="Peak" className="cap-part peak" style={{ position: 'absolute', top: 0, left: 0, zIndex: 3 }} />
@@ -81,7 +103,7 @@ const CapCustomizer = () => {
         )}
       </div>
 
-      <div className="customization-controls">
+      <div className="container customization-controls">
         <h2>Select parts to change color</h2>
         <div className="part-selection">
           {capData.capParts.map(part => (
@@ -98,7 +120,7 @@ const CapCustomizer = () => {
                   {part.colors.map(color => (
                     <button
                       key={color.value}
-                      style={{ backgroundColor: color.value, margin: '5px', cursor: 'pointer', width: '40px', height: '40px', border: 'none', borderRadius: '5px' }}
+                      style={{ backgroundColor: color.value, margin: '5px', cursor: 'pointer', width: '20px', height: '20px', border: 'none', borderRadius: '50%' }}
                       onClick={() => handleColorChange(part.partName, color.image)}
                     />
                   ))}
@@ -111,9 +133,9 @@ const CapCustomizer = () => {
         {/* Customize Button */}
         <button 
           onClick={handleCustomizeClick} 
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="w-40 mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
         >
-          Customize
+          Add Logo & Text
         </button>
       </div>
     </div>

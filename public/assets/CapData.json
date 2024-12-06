@@ -1,10 +1,9 @@
 {
-    "capImages": [{
+    "variants": [{
             "mainImage": "../assets/mainimage/BlackCap.png",
             "sidebarImages": [
-                "../src/assets/crown/sidebar1.png",
-                "../src/assets/crown/sidebar2.png",
-                "../src/assets/crown/sidebar3.png"
+                "../assets/mainimage/BlackCap.png",
+                "../assets/mainimage/OrangeCap.png"
             ]
         },
         {
@@ -67,56 +66,42 @@
     "capParts": [{
             "partName": "base",
             "colors": [
-                { "value": "#000000", "name": "Black", "image": "../src/assets/bg.png" },
-                { "value": "#FFFFFF", "name": "White", "image": "./assets/base/white.png" },
-                { "value": "#FF0000", "name": "Red", "image": "../src/assets/base/red.png" },
-                { "value": "#00FF00", "name": "Green", "image": "../assets/bg_green.png" },
-                { "value": "#0000FF", "name": "Blue", "image": "../src/assets/blue.png" },
-                { "value": "#FFFF00", "name": "Yellow", "image": "../src/assets/bg_yellow.png" }
+
+                { "value": "#FFFFFF", "name": "White", "image": "./assets/base/white.png" }
+
             ]
         },
         {
             "partName": "crown",
             "colors": [
                 { "value": "#000000", "name": "Black", "image": "../assets/crown/black.png" },
-                { "value": "#FFFFFF", "name": "White", "image": "../src/assets/crown_white.png" },
-                { "value": "#FF0000", "name": "Red", "image": "../src/assets/crown_red.png" },
-                { "value": "#00FF00", "name": "Green", "image": "../src/assets/crown_green.png" },
-                { "value": "#0000FF", "name": "Blue", "image": "../src/assets/crown_blue.png" },
                 { "value": "orange", "name": "Orange", "image": "./assets/crown/orange.png" }
             ]
         },
         {
             "partName": "peak",
             "colors": [
-                { "value": "#000000", "name": "Black", "image": "../assets/peak/" },
+
                 { "value": "#FFFFFF", "name": "White", "image": "../assets/peak/white.png" },
-                { "value": "#FF0000", "name": "Red", "image": "../assets/peak_red.png" },
-                { "value": "#00FF00", "name": "Green", "image": "../assets/peak_green.png" },
-                { "value": "#0000FF", "name": "Blue", "image": "../assets/peak/blue.png" },
-                { "value": "#FFFF00", "name": "Yellow", "image": "../assets/peak_yellow.png" }
+
+                { "value": "#0000FF", "name": "Blue", "image": "../assets/peak/blue.png" }
+
             ]
         },
         {
             "partName": "sandwich",
             "colors": [
-                { "value": "#000000", "name": "Black", "image": "../assets/sandwich/black.png" },
-                { "value": "#FFFFFF", "name": "White", "image": "../src/assets/white.png" },
-                { "value": "#FF0000", "name": "Red", "image": "../assets/sandwich_red.png" },
-                { "value": "#00FF00", "name": "Green", "image": "../src/assets/sandwich_green.png" },
-                { "value": "#0000FF", "name": "Blue", "image": "../assets/" },
-                { "value": "#FFFF00", "name": "Yellow", "image": "../src/assets/sandwich_yellow.png" }
+                { "value": "#000000", "name": "Black", "image": "../assets/sandwich/black.png" }
             ]
         },
         {
             "partName": "topButton",
             "colors": [
                 { "value": "#000000", "name": "Black", "image": "../assets/topbutton/black.png" },
-                { "value": "#FFFFFF", "name": "White", "image": "../src/assets/topButton_white.png" },
+
                 { "value": "#FF0000", "name": "Red", "image": "../assets/topbutton/red.png" },
                 { "value": "Brown", "name": "Brown", "image": "../assets/topbutton/brown.png" },
-                { "value": "#0000FF", "name": "Blue", "image": "../assets/topbutton/blue.png" },
-                { "value": "#FFFF00", "name": "Yellow", "image": "../src/assets/topButton_yellow.png" }
+                { "value": "#0000FF", "name": "Blue", "image": "../assets/topbutton/blue.png" }
             ]
         }
     ]

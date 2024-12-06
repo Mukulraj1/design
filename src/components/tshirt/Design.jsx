@@ -12,7 +12,7 @@ const Design = () => {
  
 
   const [selectedVariant, setSelectedVariant] = useState(product?.variants[0] || {});
-  const [selectedImage, setSelectedImage] = useState(selectedVariant.mainImage || '');
+  const [selectedImage, setSelectedImage] = useState(product?.mainImage || '');
   const [sidebarImages, setSidebarImages] = useState(selectedVariant.sidebarImages || []);
   const [overlayImagesByImage, setOverlayImagesByImage] = useState({});
   const [currentOverlayImages, setCurrentOverlayImages] = useState([]);
@@ -29,13 +29,23 @@ const Design = () => {
   const [isEditable, setIsEditable] = useState(true);
   
 
+ useEffect(() => {
+    if (product) {
+      setSelectedImage(product.mainImage);
+      setSidebarImages(product.variants[0]?.sidebarImages || []);
+      if (product.variants && product.variants.length > 0) {
+        setSelectedVariant(product.variants[0]);
+        setSidebarImages(product.variants[0].sidebarImages || []);
+      }
+    }
+  }, [product]);
+
   useEffect(() => {
     if (selectedVariant) {
-      setSelectedImage(selectedVariant.mainImage);
-      setSidebarImages(selectedVariant.sidebarImages);
-      setCurrentOverlayImages(overlayImagesByImage[selectedImage] || []);
+      setSelectedImage(selectedVariant.mainImage || product?.mainImage);
+      setSidebarImages(selectedVariant.sidebarImages || []);
     }
-  }, [selectedVariant]);
+  }, [selectedVariant, product]);
 
   useEffect(() => {
     setCurrentOverlayImages(overlayImagesByImage[selectedImage] || []);

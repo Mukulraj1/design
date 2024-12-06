@@ -4,7 +4,7 @@ import Draggable from 'react-draggable';
 
 const DraggableWrapper = ({ id, handleDrag, children }) => {
   return (
-    <Draggable
+    <Draggable 
       onDrag={(e, data) => handleDrag(id, e, data)}
     >
       {children}
